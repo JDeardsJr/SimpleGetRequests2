@@ -15,7 +15,7 @@
     <main class="container">
         <form id="number-form">
             <label for="amount">Amount (between 3 and 50):</label>
-            <input type="number" id="amount" name="amount" min="3" max="50" placeholder="3" onfocus="this.value=''">
+            <input type="number" id="amount" name="amount" min="3" max="50" placeholder="3" onfocus="this.value=''" oninvalid="this.setCustomValidity('Please enter a number between 3 and 50')" onkeyup="setCustomValidity('')" required>
             <button type="submit" class="button">Get Dog Pics!</button>
         </form>
         <section id="results" class="results hidden">
